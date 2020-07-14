@@ -23,33 +23,37 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.BtnCancel = New System.Windows.Forms.Button()
-        Me.Password = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.KodeKasir = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.BtnLogin = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'BtnCancel
         '
-        Me.BtnCancel.Location = New System.Drawing.Point(238, 136)
+        Me.BtnCancel.Location = New System.Drawing.Point(248, 194)
         Me.BtnCancel.Name = "BtnCancel"
         Me.BtnCancel.Size = New System.Drawing.Size(75, 23)
         Me.BtnCancel.TabIndex = 11
         Me.BtnCancel.Text = "Cancel"
         Me.BtnCancel.UseVisualStyleBackColor = True
         '
-        'Password
+        'txtPassword
         '
-        Me.Password.Location = New System.Drawing.Point(144, 91)
-        Me.Password.Name = "Password"
-        Me.Password.Size = New System.Drawing.Size(169, 20)
-        Me.Password.TabIndex = 10
+        Me.txtPassword.Location = New System.Drawing.Point(154, 151)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(169, 20)
+        Me.txtPassword.TabIndex = 10
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 98)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(54, 154)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(53, 13)
         Me.Label2.TabIndex = 9
@@ -58,50 +62,78 @@ Partial Class LoginForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 46)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(54, 110)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 13)
+        Me.Label1.Size = New System.Drawing.Size(55, 13)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Kode Kasir"
+        Me.Label1.Text = "Username"
         '
-        'KodeKasir
+        'txtUsername
         '
-        Me.KodeKasir.Location = New System.Drawing.Point(144, 43)
-        Me.KodeKasir.Name = "KodeKasir"
-        Me.KodeKasir.Size = New System.Drawing.Size(169, 20)
-        Me.KodeKasir.TabIndex = 7
+        Me.txtUsername.Location = New System.Drawing.Point(154, 107)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(169, 20)
+        Me.txtUsername.TabIndex = 7
         '
         'BtnLogin
         '
-        Me.BtnLogin.Location = New System.Drawing.Point(144, 136)
+        Me.BtnLogin.Location = New System.Drawing.Point(154, 194)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(75, 23)
         Me.BtnLogin.TabIndex = 6
         Me.BtnLogin.Text = "Login"
         Me.BtnLogin.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(125, 14)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(133, 42)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "LOGIN"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(383, 66)
+        Me.Panel1.TabIndex = 13
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(331, 213)
+        Me.BackColor = System.Drawing.Color.DodgerBlue
+        Me.ClientSize = New System.Drawing.Size(407, 274)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.BtnCancel)
-        Me.Controls.Add(Me.Password)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.KodeKasir)
+        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.BtnLogin)
         Me.Name = "LoginForm"
         Me.Text = "LoginForm"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents BtnCancel As Button
-    Friend WithEvents Password As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents KodeKasir As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents BtnLogin As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel1 As Panel
 End Class

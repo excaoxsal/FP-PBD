@@ -77,17 +77,23 @@
     <Compile Include="Control\ClassCtlBarang.vb" />
     <Compile Include="Control\InfProsess.vb" />
     <Compile Include="Entity\ClassEntBarang.vb" />
+    <Compile Include="Forms\FormInputStaff.Designer.vb">
+      <DependentUpon>FormInputStaff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormInputStaff.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FormCariBarang.Designer.vb">
       <DependentUpon>FormCariBarang.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormCariBarang.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormBarang.vb">
+    <Compile Include="Forms\FormInputSiswa.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormBarang.Designer.vb">
-      <DependentUpon>FormBarang.vb</DependentUpon>
+    <Compile Include="Forms\FormInputSiswa.Designer.vb">
+      <DependentUpon>FormInputSiswa.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormTransaksi.Designer.vb">
@@ -127,8 +133,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\FormBarang.resx">
-      <DependentUpon>FormBarang.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FormInputStaff.resx">
+      <DependentUpon>FormInputStaff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormInputSiswa.resx">
+      <DependentUpon>FormInputSiswa.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCariBarang.resx">
       <DependentUpon>FormCariBarang.vb</DependentUpon>
