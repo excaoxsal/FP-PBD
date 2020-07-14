@@ -1,0 +1,15 @@
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.vbprojAssemblyReference.cache
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.FormBarang.resources
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.Resources.resources
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.vbproj.GenerateResource.cache
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.vbproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\Penjualan\bin\Debug\Penjualan.exe.config
+C:\Users\ACER\source\repos\Penjualan\bin\Debug\Penjualan.exe
+C:\Users\ACER\source\repos\Penjualan\bin\Debug\Penjualan.pdb
+C:\Users\ACER\source\repos\Penjualan\bin\Debug\Penjualan.xml
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.exe
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.xml
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.pdb
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.Form1.resources
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.FormTransaksi.resources
+C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.LoginForm.resources
