@@ -23,6 +23,7 @@ Partial Class FormInputSiswa
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txtAlamat = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -54,7 +55,6 @@ Partial Class FormInputSiswa
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.tblSiswa, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,6 +83,15 @@ Partial Class FormInputSiswa
         Me.GroupBox1.Size = New System.Drawing.Size(427, 166)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 115)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(35, 13)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "E-mail"
         '
         'txtAlamat
         '
@@ -365,15 +374,6 @@ Partial Class FormInputSiswa
         Me.Label5.Size = New System.Drawing.Size(210, 42)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Input Siswa"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 115)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "E-mail"
         '
         'FormInputSiswa
         '

@@ -1,4 +1,4 @@
 ﻿Module ModObjekdanFungsi
-    Public EntitasBarang As New ClassEntBarang
-    Public KontrolBarang As New ClassCtlBarang
+    Public EntitasSiswa As New ClassEntSiswa
+    Public KontrolSiswa As New ClassCtlSiswa
 End Module

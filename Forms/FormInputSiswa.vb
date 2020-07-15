@@ -59,7 +59,7 @@ Public Class FormInputSiswa
     End Sub
 
     Private Sub RefreshGrid()
-        DTGrid = KontrolBarang.tampilData.ToTable
+        DTGrid = KontrolSiswa.tampilData.ToTable
         tblSiswa.DataSource = DTGrid
         If DTGrid.Rows.Count > 0 Then
             baris = DTGrid.Rows.Count - 1
@@ -71,7 +71,7 @@ Public Class FormInputSiswa
         End If
     End Sub
     Private Sub TampilCari(kunci As String)
-        DTGrid = KontrolBarang.cariData(kunci).ToTable
+        DTGrid = KontrolSiswa.cariData(kunci).ToTable
         If DTGrid.Rows.Count > 0 Then
             baris = DTGrid.Rows.Count - 1
             tblSiswa.DataSource = DTGrid
@@ -103,7 +103,7 @@ Public Class FormInputSiswa
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         modeProses = 1
         txtNISN.Focus()
-        TxtKode.Text = KontrolBarang.kodeBaru()
+        TxtKode.Text = KontrolSiswa.kodeBaru()
 
         txtNISN.Text = ""
         txtSiswa.Text = ""
@@ -147,16 +147,16 @@ Public Class FormInputSiswa
     End Sub
 
     Private Sub BtnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
-        With EntitasBarang
-            .kodeBarang = TxtKode.Text
-            .namaBarang = txtNISN.Text
+        With EntitasSiswa
+            .kodeNisn = TxtKode.Text
+            .namaSiswas = txtNISN.Text
             .hargaBarang = txtSiswa.Text
             .stokBarang = TxtStok.Text
         End With
         If modeProses = 1 Then
-            KontrolBarang.InsertData(EntitasBarang)
+            KontrolSiswa.InsertData(EntitasSiswa)
         ElseIf modeProses = 2 Then
-            KontrolBarang.updateData(EntitasBarang)
+            KontrolSiswa.updateData(EntitasSiswa)
 
         End If
         MsgBox("data terseimpan", MsgBoxStyle.Information, "Info")
@@ -165,7 +165,7 @@ Public Class FormInputSiswa
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
 
-        KontrolBarang.deleteData(TxtKode.Text)
+        KontrolSiswa.deleteData(TxtKode.Text)
         RefreshGrid()
     End Sub
 
@@ -174,6 +174,10 @@ Public Class FormInputSiswa
     End Sub
 
     Private Sub txtTTL_TextChanged(sender As Object, e As EventArgs) Handles txtTTL.TextChanged
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
 
     End Sub
 End Class
