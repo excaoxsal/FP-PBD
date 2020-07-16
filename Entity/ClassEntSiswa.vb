@@ -4,6 +4,7 @@
     Private namasiswa As String
     Private alamatsiswa As String
     Private jeniskelamin As String
+    Private tgllahir As String
     Private notelp As Integer
     Private emailsiswa As String
     Private th_angkatan As Integer
@@ -36,6 +37,22 @@
         End Get
         Set
             namasiswa = Value
+        End Set
+    End Property
+    Public Property jk() As String
+        Get
+            Return jeniskelamin
+        End Get
+        Set
+            jeniskelamin = Value
+        End Set
+    End Property
+    Public Property tanggallahir() As String
+        Get
+            Return tgllahir
+        End Get
+        Set
+            tgllahir = Value
         End Set
     End Property
     Public Property alamat() As String

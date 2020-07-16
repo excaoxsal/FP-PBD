@@ -3,7 +3,7 @@ Public Class ClassEntGuru
     Private nama As String
     Private alamat As String
     Private notelpon As Integer
-    Private emai As String
+    Private email As String
     Private jabatan As String
 
     Public Property idGuru() As String

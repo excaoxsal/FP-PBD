@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2
+Partial Class FormInputStaff
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -44,7 +44,7 @@ Partial Class Form2
         Me.txtAlamat = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtTTL = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.rbPerempuan = New System.Windows.Forms.RadioButton()
         Me.rbLaki = New System.Windows.Forms.RadioButton()
         Me.txtStaff = New System.Windows.Forms.TextBox()
@@ -55,6 +55,7 @@ Partial Class Form2
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LblBaris = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.tblStaff, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -220,7 +221,7 @@ Partial Class Form2
         Me.GroupBox1.Controls.Add(Me.txtAlamat)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.txtTTL)
+        Me.GroupBox1.Controls.Add(Me.txtPassword)
         Me.GroupBox1.Controls.Add(Me.rbPerempuan)
         Me.GroupBox1.Controls.Add(Me.rbLaki)
         Me.GroupBox1.Controls.Add(Me.txtStaff)
@@ -274,16 +275,16 @@ Partial Class Form2
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(5, 89)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(111, 13)
+        Me.Label7.Size = New System.Drawing.Size(53, 13)
         Me.Label7.TabIndex = 11
-        Me.Label7.Text = "Tempat Tanggal Lahir"
+        Me.Label7.Text = "Password"
         '
-        'txtTTL
+        'txtPassword
         '
-        Me.txtTTL.Location = New System.Drawing.Point(162, 86)
-        Me.txtTTL.Name = "txtTTL"
-        Me.txtTTL.Size = New System.Drawing.Size(250, 20)
-        Me.txtTTL.TabIndex = 10
+        Me.txtPassword.Location = New System.Drawing.Point(162, 86)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(250, 20)
+        Me.txtPassword.TabIndex = 10
         '
         'rbPerempuan
         '
@@ -354,6 +355,7 @@ Partial Class Form2
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Location = New System.Drawing.Point(2, 0)
         Me.Panel1.Name = "Panel1"
@@ -381,7 +383,16 @@ Partial Class Form2
         Me.LblBaris.TabIndex = 14
         Me.LblBaris.Text = "Data ke 0 dari 0"
         '
-        'Form2
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(550, 52)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(70, 22)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Simpan"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'FormInputStaff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -395,8 +406,8 @@ Partial Class Form2
         Me.Controls.Add(Me.tblStaff)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Name = "FormInputStaff"
+        Me.Text = "FormInputStaff"
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
@@ -431,7 +442,6 @@ Partial Class Form2
     Friend WithEvents txtAlamat As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtTTL As TextBox
     Friend WithEvents rbPerempuan As RadioButton
     Friend WithEvents rbLaki As RadioButton
     Friend WithEvents txtStaff As TextBox
@@ -444,4 +454,6 @@ Partial Class Form2
     Friend WithEvents txtTelepon As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LblBaris As Label
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents Button1 As Button
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Menu
+Partial Class FormMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -49,22 +49,22 @@ Partial Class Menu
         'InputSiswaToolStripMenuItem
         '
         Me.InputSiswaToolStripMenuItem.Name = "InputSiswaToolStripMenuItem"
-        Me.InputSiswaToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.InputSiswaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InputSiswaToolStripMenuItem.Text = "Input Siswa"
         '
         'InputGuruToolStripMenuItem
         '
         Me.InputGuruToolStripMenuItem.Name = "InputGuruToolStripMenuItem"
-        Me.InputGuruToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.InputGuruToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InputGuruToolStripMenuItem.Text = "Input Guru"
         '
         'InputStaffToolStripMenuItem
         '
         Me.InputStaffToolStripMenuItem.Name = "InputStaffToolStripMenuItem"
-        Me.InputStaffToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.InputStaffToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.InputStaffToolStripMenuItem.Text = "Input Staff"
         '
-        'Menu
+        'FormMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -72,7 +72,7 @@ Partial Class Menu
         Me.ClientSize = New System.Drawing.Size(657, 448)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Menu"
+        Me.Name = "FormMenu"
         Me.Text = "Menu"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)

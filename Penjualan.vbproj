@@ -74,9 +74,23 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\ClassCtlBarang.vb" />
+    <Compile Include="Forms\FormInputGuru.Designer.vb">
+      <DependentUpon>FormInputGuru.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormInputGuru.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\ClassCtlGuru.vb" />
+    <Compile Include="Control\ClassCtlJurusan.vb" />
+    <Compile Include="Control\ClassCtlPembayaran.vb" />
+    <Compile Include="Control\ClassCtlSiswa.vb" />
+    <Compile Include="Control\ClassCtlStaff.vb" />
     <Compile Include="Control\InfProsess.vb" />
-    <Compile Include="Entity\ClassEntBarang.vb" />
+    <Compile Include="Entity\ClassEntGuru.vb" />
+    <Compile Include="Entity\ClassEntJurusan.vb" />
+    <Compile Include="Entity\ClassEntPembayaran.vb" />
+    <Compile Include="Entity\ClassEntSiswa.vb" />
+    <Compile Include="Entity\ClassEntStaff.vb" />
     <Compile Include="Forms\FormInputStaff.Designer.vb">
       <DependentUpon>FormInputStaff.vb</DependentUpon>
     </Compile>
@@ -108,12 +122,19 @@
     <Compile Include="Forms\LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FormMenu.Designer.vb">
+      <DependentUpon>FormMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Global\ModObjekdanFungsi.vb" />
     <Compile Include="Global\ModuleKoneksiDB.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\FormLogin.Designer.vb">
       <DependentUpon>FormLogin.vb</DependentUpon>
@@ -133,6 +154,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\FormInputGuru.resx">
+      <DependentUpon>FormInputGuru.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormInputStaff.resx">
       <DependentUpon>FormInputStaff.vb</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMenu.resx">
+      <DependentUpon>FormMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -167,6 +194,8 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="aswd\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

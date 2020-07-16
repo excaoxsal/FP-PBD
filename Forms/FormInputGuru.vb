@@ -1,6 +1,6 @@
 ﻿Imports Microsoft.Build.Framework.XamlTypes
 
-Public Class FormInputSiswa
+Public Class FormInputGuru
     Dim baris As Integer
     Dim modeProses As Integer
     Private Sub AturButton(st As Boolean)
@@ -19,10 +19,10 @@ Public Class FormInputSiswa
     Private Sub IsiBox(br As Integer)
         If br < DTGrid.Rows.Count Then
             With tblSiswa.Rows(br)
-                txtIdsiswa.Text = .Cells(0).Value.ToString
-                txtNISN.Text = .Cells(1).Value.ToString
-                txtNamaSiswa.Text = .Cells(2).Value.ToString
-                txtTTL.Text = .Cells(3).Value.ToString
+                txtIdGuru.Text = .Cells(0).Value.ToString
+                txtNIK.Text = .Cells(1).Value.ToString
+                txtNamaGuru.Text = .Cells(2).Value.ToString
+                txtNotelp.Text = .Cells(3).Value.ToString
                 txtAlamat.Text = .Cells(4).Value.ToString
             End With
             LblBaris.Text = "Data ke-" & br + 1 & " dari " & tblSiswa.RowCount - 1 & " data"
@@ -86,7 +86,7 @@ Public Class FormInputSiswa
     End Sub
     Private Sub FormBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call RefreshGrid()
-        txtIdsiswa.Enabled = False
+        txtIdGuru.Enabled = False
     End Sub
 
     Private Sub BtnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
@@ -103,13 +103,13 @@ Public Class FormInputSiswa
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         modeProses = 1
-        txtNISN.Focus()
-        txtIdsiswa.Text = KontrolSiswa.kodeBaru()
+        txtNIK.Focus()
+        txtIdGuru.Text = KontrolSiswa.kodeBaru()
 
-        txtNISN.Text = ""
-        txtNamaSiswa.Text = ""
+        txtNIK.Text = ""
+        txtNamaGuru.Text = ""
         txtAlamat.Text = ""
-        txtTTL.Text = ""
+        txtNotelp.Text = ""
         txtEmail.Text = ""
 
 
@@ -118,7 +118,7 @@ Public Class FormInputSiswa
 
     Private Sub BtnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
         modeProses = 2
-        txtNISN.Focus()
+        txtNIK.Focus()
     End Sub
 
     Private Sub BtnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
@@ -152,10 +152,10 @@ Public Class FormInputSiswa
 
     Private Sub BtnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
         With EntitasSiswa
-            .kodesiswa = txtIdsiswa.Text
-            .kodeNisn = txtNISN.Text
-            .namaSiswas = txtNamaSiswa.Text
-            .tanggallahir = txtTTL.Text
+            .kodesiswa = txtIdGuru.Text
+            .kodeNisn = txtNIK.Text
+            .namaSiswas = txtNamaGuru.Text
+            .tanggallahir = txtNotelp.Text
             .alamat = txtAlamat.Text
         End With
         If modeProses = 1 Then
@@ -170,7 +170,7 @@ Public Class FormInputSiswa
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
 
-        KontrolSiswa.deleteData(txtIdsiswa.Text)
+        KontrolSiswa.deleteData(txtIdGuru.Text)
         RefreshGrid()
     End Sub
 
@@ -178,7 +178,7 @@ Public Class FormInputSiswa
 
     End Sub
 
-    Private Sub txtTTL_TextChanged(sender As Object, e As EventArgs) Handles txtTTL.TextChanged
+    Private Sub txtTTL_TextChanged(sender As Object, e As EventArgs) Handles txtNotelp.TextChanged
 
     End Sub
 
@@ -193,9 +193,5 @@ Public Class FormInputSiswa
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         FormMenu.Show()
         Me.Dispose()
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-        FormInputGuru.Show()
     End Sub
 End Class

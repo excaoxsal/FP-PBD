@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FormInputSiswa
+Partial Class FormInputGuru
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,18 +23,18 @@ Partial Class FormInputSiswa
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtIdsiswa = New System.Windows.Forms.TextBox()
+        Me.txtIdGuru = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtAlamat = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtTTL = New System.Windows.Forms.TextBox()
+        Me.txtNotelp = New System.Windows.Forms.TextBox()
         Me.rbPerempuan = New System.Windows.Forms.RadioButton()
         Me.rbLaki = New System.Windows.Forms.RadioButton()
-        Me.txtNamaSiswa = New System.Windows.Forms.TextBox()
-        Me.txtNISN = New System.Windows.Forms.TextBox()
+        Me.txtNamaGuru = New System.Windows.Forms.TextBox()
+        Me.txtNIK = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -68,18 +68,18 @@ Partial Class FormInputSiswa
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.txtIdsiswa)
+        Me.GroupBox1.Controls.Add(Me.txtIdGuru)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtAlamat)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.txtEmail)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.txtTTL)
+        Me.GroupBox1.Controls.Add(Me.txtNotelp)
         Me.GroupBox1.Controls.Add(Me.rbPerempuan)
         Me.GroupBox1.Controls.Add(Me.rbLaki)
-        Me.GroupBox1.Controls.Add(Me.txtNamaSiswa)
-        Me.GroupBox1.Controls.Add(Me.txtNISN)
+        Me.GroupBox1.Controls.Add(Me.txtNamaGuru)
+        Me.GroupBox1.Controls.Add(Me.txtNIK)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -89,21 +89,21 @@ Partial Class FormInputSiswa
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'txtIdsiswa
+        'txtIdGuru
         '
-        Me.txtIdsiswa.Location = New System.Drawing.Point(162, 8)
-        Me.txtIdsiswa.Name = "txtIdsiswa"
-        Me.txtIdsiswa.Size = New System.Drawing.Size(250, 20)
-        Me.txtIdsiswa.TabIndex = 17
+        Me.txtIdGuru.Location = New System.Drawing.Point(162, 8)
+        Me.txtIdGuru.Name = "txtIdGuru"
+        Me.txtIdGuru.Size = New System.Drawing.Size(250, 20)
+        Me.txtIdGuru.TabIndex = 17
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(5, 11)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 13)
+        Me.Label6.Size = New System.Drawing.Size(44, 13)
         Me.Label6.TabIndex = 16
-        Me.Label6.Text = "ID Siswa"
+        Me.Label6.Text = "ID Guru"
         '
         'Label1
         '
@@ -142,16 +142,16 @@ Partial Class FormInputSiswa
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(5, 102)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(111, 13)
+        Me.Label7.Size = New System.Drawing.Size(57, 13)
         Me.Label7.TabIndex = 11
-        Me.Label7.Text = "Tempat Tanggal Lahir"
+        Me.Label7.Text = "No Telpon"
         '
-        'txtTTL
+        'txtNotelp
         '
-        Me.txtTTL.Location = New System.Drawing.Point(162, 99)
-        Me.txtTTL.Name = "txtTTL"
-        Me.txtTTL.Size = New System.Drawing.Size(250, 20)
-        Me.txtTTL.TabIndex = 10
+        Me.txtNotelp.Location = New System.Drawing.Point(162, 99)
+        Me.txtNotelp.Name = "txtNotelp"
+        Me.txtNotelp.Size = New System.Drawing.Size(250, 20)
+        Me.txtNotelp.TabIndex = 10
         '
         'rbPerempuan
         '
@@ -175,19 +175,19 @@ Partial Class FormInputSiswa
         Me.rbLaki.Text = "Laki-laki"
         Me.rbLaki.UseVisualStyleBackColor = True
         '
-        'txtNamaSiswa
+        'txtNamaGuru
         '
-        Me.txtNamaSiswa.Location = New System.Drawing.Point(162, 57)
-        Me.txtNamaSiswa.Name = "txtNamaSiswa"
-        Me.txtNamaSiswa.Size = New System.Drawing.Size(250, 20)
-        Me.txtNamaSiswa.TabIndex = 6
+        Me.txtNamaGuru.Location = New System.Drawing.Point(162, 57)
+        Me.txtNamaGuru.Name = "txtNamaGuru"
+        Me.txtNamaGuru.Size = New System.Drawing.Size(250, 20)
+        Me.txtNamaGuru.TabIndex = 6
         '
-        'txtNISN
+        'txtNIK
         '
-        Me.txtNISN.Location = New System.Drawing.Point(162, 32)
-        Me.txtNISN.Name = "txtNISN"
-        Me.txtNISN.Size = New System.Drawing.Size(250, 20)
-        Me.txtNISN.TabIndex = 5
+        Me.txtNIK.Location = New System.Drawing.Point(162, 32)
+        Me.txtNIK.Name = "txtNIK"
+        Me.txtNIK.Size = New System.Drawing.Size(250, 20)
+        Me.txtNIK.TabIndex = 5
         '
         'Label4
         '
@@ -203,18 +203,18 @@ Partial Class FormInputSiswa
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(6, 57)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 13)
+        Me.Label3.Size = New System.Drawing.Size(61, 13)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Nama Siswa"
+        Me.Label3.Text = "Nama Guru"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(6, 31)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(33, 13)
+        Me.Label2.Size = New System.Drawing.Size(25, 13)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "NISN"
+        Me.Label2.Text = "NIK"
         '
         'GroupBox2
         '
@@ -387,7 +387,7 @@ Partial Class FormInputSiswa
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(497, 28)
+        Me.Button1.Location = New System.Drawing.Point(503, 28)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
@@ -402,11 +402,11 @@ Partial Class FormInputSiswa
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(243, 9)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(210, 42)
+        Me.Label5.Size = New System.Drawing.Size(193, 42)
         Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Input Siswa"
+        Me.Label5.Text = "Input Guru"
         '
-        'FormInputSiswa
+        'FormInputGuru
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -420,7 +420,7 @@ Partial Class FormInputSiswa
         Me.Controls.Add(Me.tblSiswa)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "FormInputSiswa"
+        Me.Name = "FormInputGuru"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -437,8 +437,8 @@ Partial Class FormInputSiswa
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtNamaSiswa As TextBox
-    Friend WithEvents txtNISN As TextBox
+    Friend WithEvents txtNamaGuru As TextBox
+    Friend WithEvents txtNIK As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox2 As GroupBox
@@ -464,11 +464,11 @@ Partial Class FormInputSiswa
     Friend WithEvents Label8 As Label
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents txtTTL As TextBox
+    Friend WithEvents txtNotelp As TextBox
     Friend WithEvents rbPerempuan As RadioButton
     Friend WithEvents rbLaki As RadioButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents txtIdsiswa As TextBox
+    Friend WithEvents txtIdGuru As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Button1 As Button
 End Class

@@ -13,3 +13,21 @@ C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.pdb
 C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.Form1.resources
 C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.FormTransaksi.resources
 C:\Users\ACER\source\repos\Penjualan\obj\Debug\Penjualan.LoginForm.resources
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.vbprojAssemblyReference.cache
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.FormInputSiswa.resources
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.Form1.resources
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.FormTransaksi.resources
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.LoginForm.resources
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.Resources.resources
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.vbproj.GenerateResource.cache
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.vbproj.CoreCompileInputs.cache
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.exe
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.xml
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.pdb
+E:\My Data\Tugas\PBD\FP-PBD\bin\Debug\Penjualan.exe.config
+E:\My Data\Tugas\PBD\FP-PBD\bin\Debug\Penjualan.exe
+E:\My Data\Tugas\PBD\FP-PBD\bin\Debug\Penjualan.pdb
+E:\My Data\Tugas\PBD\FP-PBD\bin\Debug\Penjualan.xml
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.FormInputStaff.resources
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.FormInputGuru.resources
+E:\My Data\Tugas\PBD\FP-PBD\obj\Debug\Penjualan.FormMenu.resources

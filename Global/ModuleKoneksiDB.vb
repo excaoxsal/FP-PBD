@@ -7,7 +7,7 @@ Module ModuleKoneksiDB
     Public DTS As New DataSet
     Public DTT As New DataTable
     Public DTGrid As New DataTable
-    Public strKon = "Provider=SQLNCLI11;Data Source=Excalimoon;Integrated Security=SSPI;Initial Catalog=E:\MY DATA\TUGAS\PBD\PBD\18.12.0895\DB\DB_PENJUALAN_0895.MDF"
+    Public strKon = "Provider=SQLNCLI11;Data Source=EXCALIMOON;Integrated Security=SSPI;Initial Catalog=DBPBD_PendaftaranSiswa"
     Public koneksi As New OleDbConnection(strKon)
     Public Function BUKAKONEKSI() As OleDbConnection
         Try

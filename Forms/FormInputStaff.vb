@@ -1,6 +1,44 @@
-﻿Public Class Form2
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class FormInputStaff
+    Dim baris As Integer
+    Dim modeProses As Integer
+    Private Sub AturButton(st As Boolean)
+        btnTambah.Enabled = st
+        btnUbah.Enabled = st
+        btnHapus.Enabled = st
+        btnSimpan.Enabled = Not st
+        btnBatal.Enabled = Not st
 
+        GroupBox1.Enabled = Not st
+        GroupBox2.Enabled = st
+        GroupBox3.Enabled = st
+    End Sub
+    Private Sub IsiBox(br As Integer)
+        If br < DTGrid.Rows.Count Then
+            With tblStaff.Rows(br)
+                txtNIK.Text = .Cells(0).Value.ToString
+                txtStaff.Text = .Cells(1).Value.ToString
+                txtTelepon.Text = .Cells(2).Value.ToString
+                txtAlamat.Text = .Cells(3).Value.ToString
+            End With
+            LblBaris.Text = "Data ke-" & br + 1 & " dari " & tblStaff.RowCount - 1 & " data"
+
+        End If
+    End Sub
+    Private Sub RefreshGrid()
+        DTGrid = KontrolStaff.tampilData.ToTable
+        tblStaff.DataSource = DTGrid
+        If DTGrid.Rows.Count > 0 Then
+            baris = DTGrid.Rows.Count - 1
+            tblStaff.Rows(DTGrid.Rows.Count - 1).Selected = True
+            tblStaff.CurrentCell = tblStaff.Item(1, baris)
+            AturButton(True)
+            IsiBox(baris)
+
+        End If
+    End Sub
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call RefreshGrid()
+        txtNIK.Enabled = False
     End Sub
 
     Private Sub BtnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
@@ -55,5 +93,10 @@
 
     Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        FormMenu.Show()
+        Me.Dispose()
     End Sub
 End Class
