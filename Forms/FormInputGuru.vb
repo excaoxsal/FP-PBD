@@ -60,7 +60,7 @@ Public Class FormInputGuru
     End Sub
 
     Private Sub RefreshGrid()
-        DTGrid = KontrolSiswa.tampilData.ToTable
+        DTGrid = KontrolGuru.tampilData.ToTable
         tblSiswa.DataSource = DTGrid
         If DTGrid.Rows.Count > 0 Then
             baris = DTGrid.Rows.Count - 1
@@ -72,7 +72,7 @@ Public Class FormInputGuru
         End If
     End Sub
     Private Sub TampilCari(kunci As String)
-        DTGrid = KontrolSiswa.cariData(kunci).ToTable
+        DTGrid = KontrolGuru.cariData(kunci).ToTable
         If DTGrid.Rows.Count > 0 Then
             baris = DTGrid.Rows.Count - 1
             tblSiswa.DataSource = DTGrid
@@ -104,7 +104,7 @@ Public Class FormInputGuru
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         modeProses = 1
         txtNIK.Focus()
-        txtIdGuru.Text = KontrolGuru.kodeBaru()
+        txtIdGuru.Text = KontrolGuru.idBaru()
 
         txtNIK.Text = ""
         txtNamaGuru.Text = ""
@@ -113,13 +113,14 @@ Public Class FormInputGuru
         txtEmail.Text = ""
         TxtJabatan.Text = ""
 
-
+        AturButton(False)
 
     End Sub
 
     Private Sub BtnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
         modeProses = 2
         txtNIK.Focus()
+        AturButton(False)
     End Sub
 
     Private Sub BtnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
@@ -152,22 +153,22 @@ Public Class FormInputGuru
     End Sub
 
     Private Sub BtnSimpan_Click(sender As Object, e As EventArgs) Handles btnSimpan.Click
-        With EntitasSiswa
-            .kodesiswa = txtIdGuru.Text
-            .kodeNisn = txtNIK.Text
-            .namaSiswas = txtNamaGuru.Text
-            .tanggallahir = txtNotelp.Text
-            .alamat = txtAlamat.Text
+        With EntitasGuru
+            .idGuru = txtIdGuru.Text
+            .kodeNIK = txtNIK.Text
+            .namaGuru = txtNamaGuru.Text
+            .notelponGuru = txtNotelp.Text
+            .alamatGuru = txtAlamat.Text
             If (rbLaki.Checked) Then
-                .jk = "L"
+                .jenkel = "L"
             ElseIf (rbPerempuan.Checked) Then
-                .jk = "P"
+                .jenkel = "P"
             End If
         End With
         If modeProses = 1 Then
-            KontrolSiswa.InsertData(EntitasSiswa)
+            KontrolGuru.InsertData(EntitasGuru)
         ElseIf modeProses = 2 Then
-            KontrolSiswa.updateData(EntitasSiswa)
+            KontrolGuru.updateData(EntitasGuru)
 
         End If
         MsgBox("data terseimpan", MsgBoxStyle.Information, "Info")
@@ -177,8 +178,15 @@ Public Class FormInputGuru
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
-
-        KontrolSiswa.deleteData(txtIdGuru.Text)
+        Dim status_referensi As Boolean
+        status_referensi = KontrolGuru.cekGuruDireferensi(txtIdGuru.Text)
+        If status_referensi Then
+            MsgBox("Dataa masih digunakan, tidak boleh dihapus", MsgBoxStyle.Exclamation, "Peringatan")
+            Exit Sub
+        End If
+        If MsgBox("Apakah anda yakin akan menghapus " & txtIdGuru.Text & "-" & txtNamaGuru.Text & "?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
+            KontrolGuru.deleteData(txtIdGuru.Text)
+        End If
         RefreshGrid()
     End Sub
 
@@ -198,7 +206,7 @@ Public Class FormInputGuru
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         FormMenu.Show()
         Me.Dispose()
     End Sub

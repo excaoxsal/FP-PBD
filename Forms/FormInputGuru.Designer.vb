@@ -23,6 +23,8 @@ Partial Class FormInputGuru
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GBIsidata = New System.Windows.Forms.GroupBox()
+        Me.TxtJabatan = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.txtIdGuru = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -56,10 +58,7 @@ Partial Class FormInputGuru
         Me.LblBaris = New System.Windows.Forms.Label()
         Me.btnSelesai = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TxtJabatan = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.GBIsidata.SuspendLayout()
         Me.GBBtn.SuspendLayout()
         CType(Me.tblSiswa, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,6 +91,23 @@ Partial Class FormInputGuru
         Me.GBIsidata.Size = New System.Drawing.Size(427, 218)
         Me.GBIsidata.TabIndex = 0
         Me.GBIsidata.TabStop = False
+        '
+        'TxtJabatan
+        '
+        Me.TxtJabatan.Location = New System.Drawing.Point(162, 177)
+        Me.TxtJabatan.Name = "TxtJabatan"
+        Me.TxtJabatan.Size = New System.Drawing.Size(250, 20)
+        Me.TxtJabatan.TabIndex = 24
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(5, 180)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(45, 13)
+        Me.Label9.TabIndex = 22
+        Me.Label9.Text = "Jabatan"
         '
         'txtIdGuru
         '
@@ -382,21 +398,11 @@ Partial Class FormInputGuru
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Location = New System.Drawing.Point(1, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(662, 62)
         Me.Panel1.TabIndex = 7
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(503, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -409,23 +415,6 @@ Partial Class FormInputGuru
         Me.Label5.Size = New System.Drawing.Size(193, 42)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Input Guru"
-        '
-        'TxtJabatan
-        '
-        Me.TxtJabatan.Location = New System.Drawing.Point(162, 177)
-        Me.TxtJabatan.Name = "TxtJabatan"
-        Me.TxtJabatan.Size = New System.Drawing.Size(250, 20)
-        Me.TxtJabatan.TabIndex = 24
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(5, 180)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(45, 13)
-        Me.Label9.TabIndex = 22
-        Me.Label9.Text = "Jabatan"
         '
         'FormInputGuru
         '
@@ -491,7 +480,6 @@ Partial Class FormInputGuru
     Friend WithEvents Label1 As Label
     Friend WithEvents txtIdGuru As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents TxtJabatan As TextBox
     Friend WithEvents Label9 As Label
 End Class

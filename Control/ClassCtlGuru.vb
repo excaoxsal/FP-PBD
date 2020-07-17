@@ -30,6 +30,8 @@ Public Class ClassCtlGuru : Implements InfProsess
     End Function
 
     Public Function deleteData(kunci As String) As OleDbCommand Implements InfProsess.deleteData
+
+
         CMD = New OleDbCommand("delete from guru where id_guru ='" & kunci & "'", BUKAKONEKSI)
         CMD.CommandType = CommandType.Text
         CMD.ExecuteNonQuery()
@@ -75,7 +77,7 @@ Public Class ClassCtlGuru : Implements InfProsess
             Throw New Exception(ex.Message)
         End Try
     End Function
-    Function cekSiswaDireferensi(kunci As String) As Boolean
+    Function cekGuruDireferensi(kunci As String) As Boolean
         Dim cek As Boolean
         cek = False
         Try
