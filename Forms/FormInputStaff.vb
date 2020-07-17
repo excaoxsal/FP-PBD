@@ -8,9 +8,6 @@
         btnSimpan.Enabled = Not st
         btnBatal.Enabled = Not st
 
-        GroupBox1.Enabled = Not st
-        GroupBox2.Enabled = st
-        GroupBox3.Enabled = st
     End Sub
     Private Sub IsiBox(br As Integer)
         If br < DTGrid.Rows.Count Then
@@ -42,14 +39,14 @@
     End Sub
 
     Private Sub BtnSelesai_Click(sender As Object, e As EventArgs) Handles btnSelesai.Click
-
+        Me.Dispose()
     End Sub
 
     Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) Handles GroupBox4.Enter
 
     End Sub
 
-    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
+    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GBCari.Enter
 
     End Sub
 
@@ -57,11 +54,11 @@
 
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GBInput.Enter
 
     End Sub
 
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GBTombol.Enter
 
     End Sub
 
@@ -88,6 +85,17 @@
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
+        modeProses = 1
+        AturButton(False)
+        txtNIK.Focus()
+        txtStaff.Text = KontrolStaff.idBaru()
+
+        txtNIK.Text = ""
+        txtStaff.Text = ""
+        txtPassword.Text = ""
+        txtTelepon.Text = ""
+        txtAlamat.Text = ""
+        txtEmail.Text = ""
 
     End Sub
 
@@ -100,5 +108,31 @@
         Me.Dispose()
     End Sub
 
+    Private Sub btnFirst_Click(sender As Object, e As EventArgs) Handles btnFirst.Click
+        tblStaff.ClearSelection()
+        baris = 0
+        tblStaff.Rows(baris).Selected = True
+        IsiBox(baris)
+    End Sub
 
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+        tblStaff.ClearSelection()
+        If baris < DTGrid.Rows.Count - 1 Then baris = baris + 1
+        tblStaff.Rows(baris).Selected = True
+        IsiBox(baris)
+    End Sub
+
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        tblStaff.ClearSelection()
+        If baris > 0 Then baris = baris - 1
+        tblStaff.Rows(baris).Selected = True
+        IsiBox(baris)
+    End Sub
+
+    Private Sub btnLast_Click(sender As Object, e As EventArgs) Handles btnLast.Click
+        tblStaff.ClearSelection()
+        baris = DTGrid.Rows.Count - 1
+        tblStaff.Rows(baris).Selected = True
+        IsiBox(baris)
+    End Sub
 End Class
