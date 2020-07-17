@@ -39,6 +39,10 @@ Partial Class FormInputStaff
         Me.btnUbah = New System.Windows.Forms.Button()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TxtJabatan = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.txtTelepon = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtAlamat = New System.Windows.Forms.TextBox()
@@ -53,9 +57,9 @@ Partial Class FormInputStaff
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LblBaris = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.tblStaff, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,9 +155,9 @@ Partial Class FormInputStaff
         'tblStaff
         '
         Me.tblStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tblStaff.Location = New System.Drawing.Point(12, 256)
+        Me.tblStaff.Location = New System.Drawing.Point(12, 314)
         Me.tblStaff.Name = "tblStaff"
-        Me.tblStaff.Size = New System.Drawing.Size(642, 196)
+        Me.tblStaff.Size = New System.Drawing.Size(642, 138)
         Me.tblStaff.TabIndex = 9
         '
         'GroupBox2
@@ -216,6 +220,10 @@ Partial Class FormInputStaff
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TxtJabatan)
+        Me.GroupBox1.Controls.Add(Me.txtEmail)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.txtTelepon)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtAlamat)
@@ -231,13 +239,47 @@ Partial Class FormInputStaff
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 84)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(427, 166)
+        Me.GroupBox1.Size = New System.Drawing.Size(427, 209)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         '
+        'TxtJabatan
+        '
+        Me.TxtJabatan.Location = New System.Drawing.Point(162, 180)
+        Me.TxtJabatan.Name = "TxtJabatan"
+        Me.TxtJabatan.Size = New System.Drawing.Size(250, 20)
+        Me.TxtJabatan.TabIndex = 20
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(162, 156)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(250, 20)
+        Me.txtEmail.TabIndex = 19
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(5, 183)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(45, 13)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "Jabatan"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(6, 159)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(32, 13)
+        Me.Label6.TabIndex = 17
+        Me.Label6.Text = "Email"
+        '
         'txtTelepon
         '
-        Me.txtTelepon.Location = New System.Drawing.Point(162, 111)
+        Me.txtTelepon.Location = New System.Drawing.Point(162, 107)
         Me.txtTelepon.Name = "txtTelepon"
         Me.txtTelepon.Size = New System.Drawing.Size(250, 20)
         Me.txtTelepon.TabIndex = 16
@@ -246,7 +288,7 @@ Partial Class FormInputStaff
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(5, 118)
+        Me.Label1.Location = New System.Drawing.Point(5, 110)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 13)
         Me.Label1.TabIndex = 15
@@ -254,7 +296,7 @@ Partial Class FormInputStaff
         '
         'txtAlamat
         '
-        Me.txtAlamat.Location = New System.Drawing.Point(162, 137)
+        Me.txtAlamat.Location = New System.Drawing.Point(162, 133)
         Me.txtAlamat.Name = "txtAlamat"
         Me.txtAlamat.Size = New System.Drawing.Size(250, 20)
         Me.txtAlamat.TabIndex = 14
@@ -263,7 +305,7 @@ Partial Class FormInputStaff
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(5, 140)
+        Me.Label8.Location = New System.Drawing.Point(6, 136)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 13
@@ -273,7 +315,7 @@ Partial Class FormInputStaff
         '
         Me.Label7.AutoSize = True
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(5, 89)
+        Me.Label7.Location = New System.Drawing.Point(6, 85)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(53, 13)
         Me.Label7.TabIndex = 11
@@ -281,7 +323,7 @@ Partial Class FormInputStaff
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(162, 86)
+        Me.txtPassword.Location = New System.Drawing.Point(162, 82)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(250, 20)
         Me.txtPassword.TabIndex = 10
@@ -289,7 +331,7 @@ Partial Class FormInputStaff
         'rbPerempuan
         '
         Me.rbPerempuan.AutoSize = True
-        Me.rbPerempuan.Location = New System.Drawing.Point(239, 66)
+        Me.rbPerempuan.Location = New System.Drawing.Point(238, 62)
         Me.rbPerempuan.Name = "rbPerempuan"
         Me.rbPerempuan.Size = New System.Drawing.Size(79, 17)
         Me.rbPerempuan.TabIndex = 8
@@ -300,7 +342,7 @@ Partial Class FormInputStaff
         'rbLaki
         '
         Me.rbLaki.AutoSize = True
-        Me.rbLaki.Location = New System.Drawing.Point(162, 66)
+        Me.rbLaki.Location = New System.Drawing.Point(162, 62)
         Me.rbLaki.Name = "rbLaki"
         Me.rbLaki.Size = New System.Drawing.Size(64, 17)
         Me.rbLaki.TabIndex = 7
@@ -326,7 +368,7 @@ Partial Class FormInputStaff
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(6, 68)
+        Me.Label4.Location = New System.Drawing.Point(6, 64)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(71, 13)
         Me.Label4.TabIndex = 3
@@ -362,6 +404,15 @@ Partial Class FormInputStaff
         Me.Panel1.Size = New System.Drawing.Size(675, 78)
         Me.Panel1.TabIndex = 13
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(550, 52)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(70, 22)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Simpan"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -382,15 +433,6 @@ Partial Class FormInputStaff
         Me.LblBaris.Size = New System.Drawing.Size(83, 13)
         Me.LblBaris.TabIndex = 14
         Me.LblBaris.Text = "Data ke 0 dari 0"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(550, 52)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(70, 22)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Simpan"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'FormInputStaff
         '
@@ -456,4 +498,8 @@ Partial Class FormInputStaff
     Friend WithEvents LblBaris As Label
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents TxtJabatan As TextBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label6 As Label
 End Class

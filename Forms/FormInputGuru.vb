@@ -10,9 +10,9 @@ Public Class FormInputGuru
         btnSimpan.Enabled = Not st
         btnBatal.Enabled = Not st
 
-        GroupBox1.Enabled = Not st
-        GroupBox2.Enabled = st
-        GroupBox3.Enabled = st
+        GBIsidata.Enabled = Not st
+        GBNavigasi.Enabled = st
+        GBCari.Enabled = st
 
 
     End Sub
@@ -37,11 +37,11 @@ Public Class FormInputGuru
 
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GBIsidata.Enter
 
     End Sub
 
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GBBtn.Enter
 
     End Sub
 
@@ -104,13 +104,14 @@ Public Class FormInputGuru
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
         modeProses = 1
         txtNIK.Focus()
-        txtIdGuru.Text = KontrolSiswa.kodeBaru()
+        txtIdGuru.Text = KontrolGuru.kodeBaru()
 
         txtNIK.Text = ""
         txtNamaGuru.Text = ""
         txtAlamat.Text = ""
         txtNotelp.Text = ""
         txtEmail.Text = ""
+        TxtJabatan.Text = ""
 
 
 
@@ -157,6 +158,11 @@ Public Class FormInputGuru
             .namaSiswas = txtNamaGuru.Text
             .tanggallahir = txtNotelp.Text
             .alamat = txtAlamat.Text
+            If (rbLaki.Checked) Then
+                .jk = "L"
+            ElseIf (rbPerempuan.Checked) Then
+                .jk = "P"
+            End If
         End With
         If modeProses = 1 Then
             KontrolSiswa.InsertData(EntitasSiswa)
@@ -166,6 +172,8 @@ Public Class FormInputGuru
         End If
         MsgBox("data terseimpan", MsgBoxStyle.Information, "Info")
         RefreshGrid()
+        AturButton(True)
+        modeProses = 0
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click

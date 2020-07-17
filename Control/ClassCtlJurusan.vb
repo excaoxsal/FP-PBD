@@ -24,9 +24,8 @@ Public Class ClassCtlJurusan : Implements InfProsess
         Return CMD
     End Function
 
-    Public Function deleteData(Ob As Object) As OleDbCommand Implements InfProsess.deleteData
-        Dim data As New ClassEntJurusan
-        data = Ob
+    Public Function deleteData(kunci As String) As OleDbCommand Implements InfProsess.deleteData
+
 
 
         CMD.CommandType = CommandType.Text

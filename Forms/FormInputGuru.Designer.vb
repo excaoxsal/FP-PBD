@@ -22,7 +22,7 @@ Partial Class FormInputGuru
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GBIsidata = New System.Windows.Forms.GroupBox()
         Me.txtIdGuru = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -38,17 +38,17 @@ Partial Class FormInputGuru
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GBBtn = New System.Windows.Forms.GroupBox()
         Me.btnBatal = New System.Windows.Forms.Button()
         Me.btnSimpan = New System.Windows.Forms.Button()
         Me.btnHapus = New System.Windows.Forms.Button()
         Me.btnUbah = New System.Windows.Forms.Button()
         Me.btnTambah = New System.Windows.Forms.Button()
         Me.tblSiswa = New System.Windows.Forms.DataGridView()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GBCari = New System.Windows.Forms.GroupBox()
         Me.btnCari = New System.Windows.Forms.Button()
         Me.txtCari = New System.Windows.Forms.TextBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.GBNavigasi = New System.Windows.Forms.GroupBox()
         Me.btnLast = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnPrev = New System.Windows.Forms.Button()
@@ -58,36 +58,40 @@ Partial Class FormInputGuru
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.TxtJabatan = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.GBIsidata.SuspendLayout()
+        Me.GBBtn.SuspendLayout()
         CType(Me.tblSiswa, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
-        Me.GroupBox4.SuspendLayout()
+        Me.GBCari.SuspendLayout()
+        Me.GBNavigasi.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'GBIsidata
         '
-        Me.GroupBox1.Controls.Add(Me.txtIdGuru)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.txtAlamat)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.txtEmail)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.txtNotelp)
-        Me.GroupBox1.Controls.Add(Me.rbPerempuan)
-        Me.GroupBox1.Controls.Add(Me.rbLaki)
-        Me.GroupBox1.Controls.Add(Me.txtNamaGuru)
-        Me.GroupBox1.Controls.Add(Me.txtNIK)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 68)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(427, 177)
-        Me.GroupBox1.TabIndex = 0
-        Me.GroupBox1.TabStop = False
+        Me.GBIsidata.Controls.Add(Me.TxtJabatan)
+        Me.GBIsidata.Controls.Add(Me.Label9)
+        Me.GBIsidata.Controls.Add(Me.txtIdGuru)
+        Me.GBIsidata.Controls.Add(Me.Label6)
+        Me.GBIsidata.Controls.Add(Me.Label1)
+        Me.GBIsidata.Controls.Add(Me.txtAlamat)
+        Me.GBIsidata.Controls.Add(Me.Label8)
+        Me.GBIsidata.Controls.Add(Me.txtEmail)
+        Me.GBIsidata.Controls.Add(Me.Label7)
+        Me.GBIsidata.Controls.Add(Me.txtNotelp)
+        Me.GBIsidata.Controls.Add(Me.rbPerempuan)
+        Me.GBIsidata.Controls.Add(Me.rbLaki)
+        Me.GBIsidata.Controls.Add(Me.txtNamaGuru)
+        Me.GBIsidata.Controls.Add(Me.txtNIK)
+        Me.GBIsidata.Controls.Add(Me.Label4)
+        Me.GBIsidata.Controls.Add(Me.Label3)
+        Me.GBIsidata.Controls.Add(Me.Label2)
+        Me.GBIsidata.Location = New System.Drawing.Point(12, 68)
+        Me.GBIsidata.Name = "GBIsidata"
+        Me.GBIsidata.Size = New System.Drawing.Size(427, 218)
+        Me.GBIsidata.TabIndex = 0
+        Me.GBIsidata.TabStop = False
         '
         'txtIdGuru
         '
@@ -216,18 +220,18 @@ Partial Class FormInputGuru
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "NIK"
         '
-        'GroupBox2
+        'GBBtn
         '
-        Me.GroupBox2.Controls.Add(Me.btnBatal)
-        Me.GroupBox2.Controls.Add(Me.btnSimpan)
-        Me.GroupBox2.Controls.Add(Me.btnHapus)
-        Me.GroupBox2.Controls.Add(Me.btnUbah)
-        Me.GroupBox2.Controls.Add(Me.btnTambah)
-        Me.GroupBox2.Location = New System.Drawing.Point(445, 79)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(218, 166)
-        Me.GroupBox2.TabIndex = 1
-        Me.GroupBox2.TabStop = False
+        Me.GBBtn.Controls.Add(Me.btnBatal)
+        Me.GBBtn.Controls.Add(Me.btnSimpan)
+        Me.GBBtn.Controls.Add(Me.btnHapus)
+        Me.GBBtn.Controls.Add(Me.btnUbah)
+        Me.GBBtn.Controls.Add(Me.btnTambah)
+        Me.GBBtn.Location = New System.Drawing.Point(445, 79)
+        Me.GBBtn.Name = "GBBtn"
+        Me.GBBtn.Size = New System.Drawing.Size(218, 166)
+        Me.GBBtn.TabIndex = 1
+        Me.GBBtn.TabStop = False
         '
         'btnBatal
         '
@@ -277,21 +281,21 @@ Partial Class FormInputGuru
         'tblSiswa
         '
         Me.tblSiswa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tblSiswa.Location = New System.Drawing.Point(12, 251)
+        Me.tblSiswa.Location = New System.Drawing.Point(12, 292)
         Me.tblSiswa.Name = "tblSiswa"
-        Me.tblSiswa.Size = New System.Drawing.Size(642, 196)
+        Me.tblSiswa.Size = New System.Drawing.Size(642, 155)
         Me.tblSiswa.TabIndex = 2
         '
-        'GroupBox3
+        'GBCari
         '
-        Me.GroupBox3.Controls.Add(Me.btnCari)
-        Me.GroupBox3.Controls.Add(Me.txtCari)
-        Me.GroupBox3.Location = New System.Drawing.Point(1, 466)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(338, 64)
-        Me.GroupBox3.TabIndex = 3
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Masukan Data Yang Dicari"
+        Me.GBCari.Controls.Add(Me.btnCari)
+        Me.GBCari.Controls.Add(Me.txtCari)
+        Me.GBCari.Location = New System.Drawing.Point(1, 466)
+        Me.GBCari.Name = "GBCari"
+        Me.GBCari.Size = New System.Drawing.Size(338, 64)
+        Me.GBCari.TabIndex = 3
+        Me.GBCari.TabStop = False
+        Me.GBCari.Text = "Masukan Data Yang Dicari"
         '
         'btnCari
         '
@@ -309,17 +313,17 @@ Partial Class FormInputGuru
         Me.txtCari.Size = New System.Drawing.Size(196, 20)
         Me.txtCari.TabIndex = 0
         '
-        'GroupBox4
+        'GBNavigasi
         '
-        Me.GroupBox4.Controls.Add(Me.btnLast)
-        Me.GroupBox4.Controls.Add(Me.btnNext)
-        Me.GroupBox4.Controls.Add(Me.btnPrev)
-        Me.GroupBox4.Controls.Add(Me.btnFirst)
-        Me.GroupBox4.Location = New System.Drawing.Point(356, 480)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(238, 41)
-        Me.GroupBox4.TabIndex = 4
-        Me.GroupBox4.TabStop = False
+        Me.GBNavigasi.Controls.Add(Me.btnLast)
+        Me.GBNavigasi.Controls.Add(Me.btnNext)
+        Me.GBNavigasi.Controls.Add(Me.btnPrev)
+        Me.GBNavigasi.Controls.Add(Me.btnFirst)
+        Me.GBNavigasi.Location = New System.Drawing.Point(356, 480)
+        Me.GBNavigasi.Name = "GBNavigasi"
+        Me.GBNavigasi.Size = New System.Drawing.Size(238, 41)
+        Me.GBNavigasi.TabIndex = 4
+        Me.GBNavigasi.TabStop = False
         '
         'btnLast
         '
@@ -406,6 +410,23 @@ Partial Class FormInputGuru
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Input Guru"
         '
+        'TxtJabatan
+        '
+        Me.TxtJabatan.Location = New System.Drawing.Point(162, 177)
+        Me.TxtJabatan.Name = "TxtJabatan"
+        Me.TxtJabatan.Size = New System.Drawing.Size(250, 20)
+        Me.TxtJabatan.TabIndex = 24
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(5, 180)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(45, 13)
+        Me.Label9.TabIndex = 22
+        Me.Label9.Text = "Jabatan"
+        '
         'FormInputGuru
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -415,19 +436,19 @@ Partial Class FormInputGuru
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnSelesai)
         Me.Controls.Add(Me.LblBaris)
-        Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.GBNavigasi)
+        Me.Controls.Add(Me.GBCari)
         Me.Controls.Add(Me.tblSiswa)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GBBtn)
+        Me.Controls.Add(Me.GBIsidata)
         Me.Name = "FormInputGuru"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
+        Me.GBIsidata.ResumeLayout(False)
+        Me.GBIsidata.PerformLayout()
+        Me.GBBtn.ResumeLayout(False)
         CType(Me.tblSiswa, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
-        Me.GroupBox4.ResumeLayout(False)
+        Me.GBCari.ResumeLayout(False)
+        Me.GBCari.PerformLayout()
+        Me.GBNavigasi.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -435,21 +456,21 @@ Partial Class FormInputGuru
 
     End Sub
 
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GBIsidata As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents txtNamaGuru As TextBox
     Friend WithEvents txtNIK As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GBBtn As GroupBox
     Friend WithEvents btnHapus As Button
     Friend WithEvents btnUbah As Button
     Friend WithEvents btnTambah As Button
     Friend WithEvents tblSiswa As DataGridView
-    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents GBCari As GroupBox
     Friend WithEvents btnCari As Button
     Friend WithEvents txtCari As TextBox
-    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents GBNavigasi As GroupBox
     Friend WithEvents btnNext As Button
     Friend WithEvents btnPrev As Button
     Friend WithEvents btnFirst As Button
@@ -471,4 +492,6 @@ Partial Class FormInputGuru
     Friend WithEvents txtIdGuru As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents TxtJabatan As TextBox
+    Friend WithEvents Label9 As Label
 End Class

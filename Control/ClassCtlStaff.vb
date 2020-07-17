@@ -24,9 +24,9 @@ Public Class ClassCtlStaff : Implements InfProsess
         Return CMD
     End Function
 
-    Public Function deleteData(Ob As Object) As OleDbCommand Implements InfProsess.deleteData
+    Public Function deleteData(kunci As String) As OleDbCommand Implements InfProsess.deleteData
         Dim data As New ClassEntStaff
-        data = Ob
+
 
 
         CMD.CommandType = CommandType.Text
@@ -52,7 +52,7 @@ Public Class ClassCtlStaff : Implements InfProsess
         Dim baru As String
         Dim idakhir As Integer
         Try
-            DTA = New OleDbDataAdapter("Select max(right(id_staff,4)) from staff", BUKAKONEKSI)
+            DTA = New OleDbDataAdapter("Select max(right(id_staff,12)) from staff", BUKAKONEKSI)
             DTS = New DataSet()
             DTA.Fill(DTS, "max_id")
             idakhir = Val(DTS.Tables("max_id").Rows(0).Item(0))
@@ -64,7 +64,8 @@ Public Class ClassCtlStaff : Implements InfProsess
     End Function
     Public Function cariData(kunci As String) As DataView Implements InfProsess.cariData
         Try
-            DTA = New OleDbDataAdapter("Select * from STAFF where nama_staff - Like '%" & kunci & "%'", BUKAKONEKSI)
+            DTA = New OleDbDataAdapter("Select * from STAFF where nama_staff" _
+                                       & "Like '%" & kunci & "%'", BUKAKONEKSI)
             DTS = New DataSet()
             Dim grid As New DataView(DTS.Tables("Cari_Staff"))
             Return grid

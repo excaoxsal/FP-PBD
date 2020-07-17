@@ -1,6 +1,8 @@
 Public Class ClassEntGuru
-    Private id As String 
+    Private id As String
+    Private nik As String
     Private nama As String
+    Private jeniskelamin As String
     Private alamat As String
     Private notelpon As Integer
     Private email As String
@@ -14,12 +16,28 @@ Public Class ClassEntGuru
             id = Value
         End Set
     End Property
+    Public Property kodeNIK() As String
+        Get
+            Return nik
+        End Get
+        Set
+            nik = Value
+        End Set
+    End Property
     Public Property namaGuru() As String
         Get
             Return nama
         End Get
         Set
             nama = Value
+        End Set
+    End Property
+    Public Property jenkel() As String
+        Get
+            Return jeniskelamin
+        End Get
+        Set
+            jeniskelamin = Value
         End Set
     End Property
     Public Property alamatGuru() As String

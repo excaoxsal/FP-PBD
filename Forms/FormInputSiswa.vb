@@ -10,9 +10,9 @@ Public Class FormInputSiswa
         btnSimpan.Enabled = Not st
         btnBatal.Enabled = Not st
 
-        GroupBox1.Enabled = Not st
-        GroupBox2.Enabled = st
-        GroupBox3.Enabled = st
+        GBIsidata.Enabled = Not st
+        GBNavigasi.Enabled = st
+        GBcari.Enabled = st
 
 
     End Sub
@@ -37,27 +37,14 @@ Public Class FormInputSiswa
 
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GBIsidata.Enter
 
     End Sub
 
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GBBtn.Enter
 
     End Sub
 
-    Private Sub BtnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
-        tblSiswa.ClearSelection()
-        If baris < DTGrid.Rows.Count - 1 Then baris = baris + 1
-        tblSiswa.Rows(baris).Selected = True
-        IsiBox(baris)
-    End Sub
-
-    Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        tblSiswa.ClearSelection()
-        If baris > 0 Then baris = baris - 1
-        tblSiswa.Rows(baris).Selected = True
-        IsiBox(baris)
-    End Sub
 
     Private Sub RefreshGrid()
         DTGrid = KontrolSiswa.tampilData.ToTable
@@ -100,33 +87,6 @@ Public Class FormInputSiswa
             IsiBox(baris)
         End If
     End Sub
-
-    Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
-        modeProses = 1
-        txtNISN.Focus()
-        txtIdsiswa.Text = KontrolSiswa.kodeBaru()
-
-        txtNISN.Text = ""
-        txtNamaSiswa.Text = ""
-        txtAlamat.Text = ""
-        txtTTL.Text = ""
-        txtEmail.Text = ""
-
-
-
-    End Sub
-
-    Private Sub BtnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
-        modeProses = 2
-        txtNISN.Focus()
-    End Sub
-
-    Private Sub BtnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
-        Call RefreshGrid()
-        AturButton(True)
-        modeProses = 0
-    End Sub
-
     Private Sub BtnFirst_Click(sender As Object, e As EventArgs) Handles btnFirst.Click
         tblSiswa.ClearSelection()
         baris = 0
@@ -140,6 +100,49 @@ Public Class FormInputSiswa
         tblSiswa.Rows(baris).Selected = True
         IsiBox(baris)
     End Sub
+    Private Sub BtnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+        tblSiswa.ClearSelection()
+        If baris < DTGrid.Rows.Count - 1 Then baris = baris + 1
+        tblSiswa.Rows(baris).Selected = True
+        IsiBox(baris)
+    End Sub
+
+    Private Sub BtnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        tblSiswa.ClearSelection()
+        If baris > 0 Then baris = baris - 1
+        tblSiswa.Rows(baris).Selected = True
+        IsiBox(baris)
+    End Sub
+    Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles btnTambah.Click
+        modeProses = 1
+        AturButton(False)
+        txtNISN.Focus()
+        txtIdsiswa.Text = KontrolSiswa.kodeBaru()
+
+        txtNISN.Text = ""
+        txtNamaSiswa.Text = ""
+        txtAlamat.Text = ""
+        txtTTL.Text = ""
+        txtEmail.Text = ""
+        Txttahunangkatan.Text = ""
+
+
+
+    End Sub
+
+    Private Sub BtnUbah_Click(sender As Object, e As EventArgs) Handles btnUbah.Click
+        modeProses = 2
+        txtNamaSiswa.Focus()
+        AturButton(False)
+    End Sub
+
+    Private Sub BtnBatal_Click(sender As Object, e As EventArgs) Handles btnBatal.Click
+        Call RefreshGrid()
+        AturButton(True)
+        modeProses = 0
+    End Sub
+
+
 
     Private Sub BtnCari_Click(sender As Object, e As EventArgs) Handles btnCari.Click
         If txtCari.Text = "" Then
@@ -157,6 +160,15 @@ Public Class FormInputSiswa
             .namaSiswas = txtNamaSiswa.Text
             .tanggallahir = txtTTL.Text
             .alamat = txtAlamat.Text
+            .email = txtEmail.Text
+            If (rbLaki.Checked) Then
+                .jk = "L"
+            ElseIf (rbPerempuan.Checked) Then
+                .jk = "P"
+            End If
+
+
+            .tahun = Txttahunangkatan.Text
         End With
         If modeProses = 1 Then
             KontrolSiswa.InsertData(EntitasSiswa)
@@ -166,11 +178,21 @@ Public Class FormInputSiswa
         End If
         MsgBox("data terseimpan", MsgBoxStyle.Information, "Info")
         RefreshGrid()
+        AturButton(True)
+        modeProses = 0
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
 
-        KontrolSiswa.deleteData(txtIdsiswa.Text)
+        Dim status_referensi As Boolean
+        status_referensi = KontrolSiswa.cekSiswaDireferensi(txtIdsiswa.Text)
+        If status_referensi Then
+            MsgBox("Dataa masih digunakan, tidak boleh dihapus", MsgBoxStyle.Exclamation, "Peringatan")
+            Exit Sub
+        End If
+        If MsgBox("Apakah anda yakin akan menghapus " & txtIdsiswa.Text & "-" & txtNamaSiswa.Text & "?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
+            KontrolSiswa.deleteData(txtIdsiswa.Text)
+        End If
         RefreshGrid()
     End Sub
 
@@ -197,5 +219,17 @@ Public Class FormInputSiswa
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
         FormInputGuru.Show()
+    End Sub
+
+    Private Sub rbLaki_CheckedChanged(sender As Object, e As EventArgs) Handles rbLaki.CheckedChanged
+
+    End Sub
+
+    Private Sub rbPerempuan_CheckedChanged(sender As Object, e As EventArgs) Handles rbPerempuan.CheckedChanged
+
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
     End Sub
 End Class
